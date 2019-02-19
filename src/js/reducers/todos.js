@@ -17,7 +17,7 @@ const todos = (state = [], action) => {
 
 export default todos;
 
-// const renderItems = (filter) => {
+// const renderList = (filter) => {
 //   if (!filter) return todos.map((item, i) => <Item index={i} />);
 
 //   return todos.map((item, i) => {

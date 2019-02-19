@@ -1,5 +1,7 @@
 import React from 'react';
 
+import List from './List';
+
 const App = () => (
   <div>
     <div>
@@ -7,21 +9,7 @@ const App = () => (
       <input type="text" /> <button>Add</button>
     </div>
 
-    <ul>
-      <h3>To do list:</h3>
-      <li style={{ textDecoration: 'line-through' }}>
-        Item
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
-    </ul>
+    <List />
 
     <div>
       <h3>Filter by:</h3>
