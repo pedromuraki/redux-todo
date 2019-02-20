@@ -30,14 +30,17 @@ class Form extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form onSubmit={this.handleSubmit} className="form">
         <h3>Add new item:</h3>
-        <input
-          type="text"
-          onChange={this.handleChange}
-          value={this.state.inputValue}
-          required
-        /> <button type="submit">Add</button>
+        <div>
+          <input
+            type="text"
+            onChange={this.handleChange}
+            value={this.state.inputValue}
+            required
+          />
+          <button type="submit">Add</button>
+        </div>
       </form>
     )
   }

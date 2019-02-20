@@ -14,7 +14,11 @@ const mapDispatchToProps = dispatch => {
 const ListItem = ({ content, status, index, removeItem, checkItem }) => {
   return (
     <li className={status}>
-      {content} <button onClick={() => checkItem(index)}>Done</button> <button onClick={() => removeItem(index)}>Remove</button>
+      {content}
+      <div>
+        <button onClick={() => checkItem(index)}>Done</button>
+        <button onClick={() => removeItem(index)}>Remove</button>
+      </div>
     </li>
   )
 }

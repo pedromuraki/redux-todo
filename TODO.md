@@ -1,0 +1,6 @@
+- adicionar "uncheck" para cada item
+- configurar filtros
+- configurar "disableds"
+- colocar mensagem "no items" quando não houver itens
+- colocar items e filtros lado a lado
+- subir online / adicionar readme com descrição e link online

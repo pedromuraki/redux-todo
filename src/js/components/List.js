@@ -12,10 +12,10 @@ const mapStateToProps = state => {
 
 const List = ({ todos, filter }) => {
   return (
-    <ul>
-      <h3>To do list:</h3>
+    <ol className="list">
+      <h3>Items:</h3>
       {renderList(todos, filter)}
-    </ul>
+    </ol>
   )
 }
 
