@@ -1,35 +1,20 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
-import uuidv1 from 'uuid/v1';
+
+import renderList from '../helpers/renderList';
 
 const mapStateToProps = state => {
   return {
-    todos: state.todos
+    todos: state.todos,
+    filter: state.filter
   };
 };
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addCounter: () => dispatch(addCounter())
-//   };
-// };
-
-const List = ({ todos }) => {
+const List = ({ todos, filter }) => {
   return (
     <ul>
       <h3>To do list:</h3>
-      <li style={{ textDecoration: 'line-through' }}>
-        Item
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
-      <li>
-        Item <button>Done</button> <button>Remove</button>
-      </li>
+      {renderList(todos, filter)}
     </ul>
   )
 }

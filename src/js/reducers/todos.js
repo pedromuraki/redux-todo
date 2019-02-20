@@ -1,4 +1,6 @@
-const todos = (state = [], action) => {
+const initialState = []
+
+const todos = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
       return state.concat({
@@ -16,12 +18,3 @@ const todos = (state = [], action) => {
 }
 
 export default todos;
-
-// const renderList = (filter) => {
-//   if (!filter) return todos.map((item, i) => <Item index={i} />);
-
-//   return todos.map((item, i) => {
-//     if (item.status === filter) return <Item index={i} />
-//     return;
-//   });
-// }

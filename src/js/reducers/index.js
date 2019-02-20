@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
 
 /* Reducers */
-import counters from './counters';
+import todos from './todos';
+import filter from './filter';
 
 export const combinedReducers = combineReducers({
-  counters
+  todos,
+  filter
 });
 
 export default combinedReducers;

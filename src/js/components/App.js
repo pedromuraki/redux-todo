@@ -1,14 +1,11 @@
 import React from 'react';
 
+import Form from './Form';
 import List from './List';
 
 const App = () => (
   <div>
-    <div>
-      <h3>Add new item:</h3>
-      <input type="text" /> <button>Add</button>
-    </div>
-
+    <Form />
     <List />
 
     <div>

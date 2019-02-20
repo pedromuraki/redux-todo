@@ -1,4 +1,6 @@
-const filter = (state = false, action) => {
+const initialState = false
+
+const filter = (state = initialState, action) => {
   switch (action.type) {
     case 'FILTER_DONE':
       return 'is-done';
