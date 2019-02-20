@@ -1,3 +1,3 @@
-const isDisabled = (actualStatus, statusToDisable) => actualStatus === statusToDisable ? true : false;
+const isDisabled = (actualTerm, termToDisable) => actualTerm === termToDisable ? true : false;
 
 export default isDisabled;
