@@ -58,6 +58,15 @@ button {
   }
 }
 
+.list-filters-wrapper {
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+}
+
 input,
 .list {
   @include hind;
@@ -81,17 +90,28 @@ input {
 
 .list {
   @include responsive-fs(18px);
-  margin: 30px 0;
   list-style-position: inside;
+  @media (max-width: 767px) {
+    margin: 30px 0;
+  }
+  @media (min-width: 768px) {
+    width: calc(100% - 210px);
+  }
   li {
     padding-bottom: 12px;
     margin-bottom: 12px;
-    border-bottom: 1px solid #40676E;
+    border-bottom: 1px solid #71A596;
     &.is-done {
       text-decoration: line-through;
     }
     div {
       margin-top: 5px;
     }
+  }
+}
+
+.filters {
+  @media (min-width: 768px) {
+    width: 190px;
   }
 }

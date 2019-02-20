@@ -7,8 +7,10 @@ import Filters from './Filters';
 const App = () => (
   <div className="app-wrapper">
     <Form />
-    <List />
-    <Filters />
+    <div className="list-filters-wrapper">
+      <List />
+      <Filters />
+    </div>
   </div>
 )
 
