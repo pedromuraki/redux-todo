@@ -8,6 +8,7 @@ import store from './store/index';
 
 /* App */
 import App from './components/App';
+import '../scss/index.scss';
 
 render(
   <Provider store={store}>

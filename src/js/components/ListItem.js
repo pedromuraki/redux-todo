@@ -1,26 +1,22 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-// const mapStateToProps = state => {
-//   return {
-//     todos: state.todos,
-//     filter: state.filter
-//   };
-// };
+import removeItem from '../actions/todos/removeItem';
+import checkItem from '../actions/todos/checkItem';
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addCounter: () => dispatch(addCounter())
-//   };
-// };
+const mapDispatchToProps = dispatch => {
+  return {
+    removeItem: (index) => dispatch(removeItem(index)),
+    checkItem: (index) => dispatch(checkItem(index))
+  };
+};
 
-const ListItem = ({ content, index }) => {
+const ListItem = ({ content, status, index, removeItem, checkItem }) => {
   return (
-    <li>
-      {content} <button>Done</button> <button>Remove</button>
+    <li className={status}>
+      {content} <button onClick={() => checkItem(index)}>Done</button> <button onClick={() => removeItem(index)}>Remove</button>
     </li>
   )
 }
 
-// export default connect(mapStateToProps)(List);
-export default ListItem;
+export default connect(null, mapDispatchToProps)(ListItem);
