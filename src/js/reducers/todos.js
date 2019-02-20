@@ -13,6 +13,9 @@ const todos = (state = initialState, action) => {
 
     case 'CHECK_ITEM':
       return state.map((item, i) => i === action.index ? { ...item, status: 'is-done' } : item);
+
+    case 'UNCHECK_ITEM':
+      return state.map((item, i) => i === action.index ? { ...item, status: 'to-do' } : item);
   }
   return state;
 }

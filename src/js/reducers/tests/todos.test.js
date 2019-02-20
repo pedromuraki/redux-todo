@@ -85,3 +85,35 @@ describe('CHECK_ITEM', () => {
     expect(todos(initialState, action)).to.be.eql(endState);
   });
 });
+
+describe('UNCHECK_ITEM', () => {
+  it('should uncheck item based on its index', () => {
+    const initialState = deepFreeze([
+      { content: 'Example item', status: 'to-do' },
+      { content: 'Another example item', status: 'is-done' }
+    ]);
+    const action = deepFreeze({ type: 'UNCHECK_ITEM', index: 1 });
+    const endState = [
+      { content: 'Example item', status: 'to-do' },
+      { content: 'Another example item', status: 'to-do' }
+    ];
+    expect(todos(initialState, action)).to.be.eql(endState);
+  });
+
+  it('should uncheck another item based on its index', () => {
+    const initialState = deepFreeze([
+      { content: 'Example item', status: 'is-done' },
+      { content: 'Another example item', status: 'to-do' },
+      { content: 'Another example item 2', status: 'to-do' },
+      { content: 'Another example item 3', status: 'is-done' }
+    ]);
+    const action = deepFreeze({ type: 'UNCHECK_ITEM', index: 0 });
+    const endState = [
+      { content: 'Example item', status: 'to-do' },
+      { content: 'Another example item', status: 'to-do' },
+      { content: 'Another example item 2', status: 'to-do' },
+      { content: 'Another example item 3', status: 'is-done' }
+    ];
+    expect(todos(initialState, action)).to.be.eql(endState);
+  });
+});

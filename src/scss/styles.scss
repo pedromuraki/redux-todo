@@ -46,6 +46,7 @@ button {
   }
   &[disabled] {
     background: #E3EECD;
+    cursor: default;
   }
 }
 
