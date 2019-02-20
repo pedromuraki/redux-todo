@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+import isDisabled from '../helpers/isDisabled';
+
 import removeItem from '../actions/todos/removeItem';
 import checkItem from '../actions/todos/checkItem';
 import uncheckItem from '../actions/todos/uncheckItem';
@@ -12,8 +14,6 @@ const mapDispatchToProps = dispatch => {
     uncheckItem: (index) => dispatch(uncheckItem(index))
   };
 };
-
-const isDisabled = (actualStatus, statusToDisable) => actualStatus === statusToDisable ? true : false;
 
 const ListItem = ({ content, status, index, removeItem, checkItem, uncheckItem }) => {
   return (

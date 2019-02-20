@@ -1,3 +1,3 @@
 const filterDone = () => ({ type: 'FILTER_DONE' })
 
-export const filterDone;
+export default filterDone;
