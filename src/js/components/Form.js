@@ -10,10 +10,10 @@ import { connect } from 'react-redux';
 class Form extends Component {
   render() {
     return (
-      <div>
+      <form>
         <h3>Add new item:</h3>
-        <input type="text" /> <button>Add</button>
-      </div>
+        <input type="text" /> <button type="submit">Add</button>
+      </form>
     )
   }
 }
