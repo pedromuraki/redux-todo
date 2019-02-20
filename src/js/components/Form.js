@@ -3,28 +3,34 @@ import { connect } from 'react-redux';
 
 import addItem from '../actions/todos/addItem';
 
-const mapDispatchToProps = dispatch => {
-  return {
-    addItem: (content) => dispatch(addItem(content))
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     addItem: (content) => dispatch(addItem(content))
+//   };
+// };
+
+const mapDispatchToProps = {
+  addItem
+}
 
 class Form extends Component {
   constructor() {
     super();
 
-    this.state = {
-      inputValue: ''
-    };
+    // this.state = {
+    //   inputValue: ''
+    // };
 
-    this.handleChange = (e) => {
-      this.setState({ inputValue: e.target.value });
-    }
+    // this.handleChange = (e) => {
+    //   this.setState({ inputValue: e.target.value });
+    // }
 
     this.handleSubmit = (e) => {
       e.preventDefault();
-      this.props.addItem(this.state.inputValue);
-      this.setState({ inputValue: '' });
+      // this.props.addItem(this.state.inputValue);
+      this.props.addItem(e.target.item.value);
+      e.target.item.value = '';
+      // this.setState({ inputValue: '' });
     }
   }
 
@@ -35,8 +41,9 @@ class Form extends Component {
         <div>
           <input
             type="text"
-            onChange={this.handleChange}
-            value={this.state.inputValue}
+            name="item"
+            // onChange={this.handleChange}
+            // value={this.state.inputValue}
             required
           />
           <button type="submit">Add</button>
