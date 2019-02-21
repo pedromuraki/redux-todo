@@ -3,12 +3,6 @@ import { connect } from 'react-redux';
 
 import addItem from '../actions/todos/addItem';
 
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     addItem: (content) => dispatch(addItem(content))
-//   };
-// };
-
 const mapDispatchToProps = {
   addItem
 }
